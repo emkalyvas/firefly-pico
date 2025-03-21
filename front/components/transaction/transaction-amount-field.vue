@@ -117,7 +117,7 @@
 <script setup>
 import { useDataStore } from '~/stores/dataStore'
 import { moveInputCursorToEnd, sleep } from '~/utils/VueUtils'
-import { evalMath, removeEndOperators, sanitizeAmount, getFormatedNumber } from '~/utils/MathUtils'
+import { evalMath, removeEndOperators, sanitizeAmount } from '~/utils/MathUtils'
 import TablerIconConstants from '~/constants/TablerIconConstants.js'
 import { get } from 'lodash'
 import Currency from '~/models/Currency.js'
@@ -247,14 +247,14 @@ const convertAmountToForeign = () => {
   if (!isConversionValid()) {
     return
   }
-  amountForeign.value = getFormatedNumber(convertCurrency(amount.value, currencyCode.value, currencyForeignCode.value))
+  amountForeign.value = onvertCurrency(amount.value, currencyCode.value, currencyForeignCode.value)
 }
 
 const convertForeignToAmount = () => {
   if (!isConversionValid()) {
     return
   }
-  amount.value = getFormatedNumberconvertCurrency(amountForeign.value, currencyForeignCode.value, currencyCode.value))
+  amount.value = convertCurrency(amountForeign.value, currencyForeignCode.value, currencyCode.value)
 }
 
 onMounted(() => {
