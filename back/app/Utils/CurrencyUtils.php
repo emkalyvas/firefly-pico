@@ -168,7 +168,19 @@ class CurrencyUtils
         ["code" => "YER", "name" => "Yemeni Rial", "country" => "Yemen"],
         ["code" => "ZAR", "name" => "South African Rand", "country" => "South Africa"],
         ["code" => "ZMW", "name" => "Zambian Kwacha", "country" => "Zambia"],
-        ["code" => "ZWL", "name" => "Zimbabwean Dollar", "country" => "Zimbabwe"]
+        ["code" => "ZWL", "name" => "Zimbabwean Dollar", "country" => "Zimbabwe"],
+        //Cryptocurrencies
+        ["code" => "BTC", "name" => "Bitcoin", "country" => "-"],
+        ["code" => "ETH", "name" => "Ethereum", "country" => "-"],
+        ["code" => "ADA", "name" => "Cardano", "country" => "-"],
+        ["code" => "DOT", "name" => "Polkadot", "country" => "-"],
+        ["code" => "BNB", "name" => "Binance", "country" => "-"],
+        ["code" => "XRP", "name" => "Ripple XRP", "country" => "-"],
+        //Precious Metals
+        ["code" => "XAU", "name" => "Troy ounce of gold", "country" => "-"],
+        ["code" => "XAG", "name" => "Troy ounce of silver", "country" => "-"],
+        ["code" => "XPT", "name" => "Troy ounce of platinum", "country" => "-"],
+        ["code" => "XPD", "name" => "Troy ounce of palladium", "country" => "-"],
     ];
 
 }

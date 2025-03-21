@@ -68,10 +68,10 @@ const remainingDays = computed(() => {
   return differenceInDays(endDate.value, startOfDay(new Date())) + 1
 })
 
-const totalExpenseFormatted = computed(() => getFormattedValue(dataStore.totalExpenseThisMonth))
-const totalIncomeFormatted = computed(() => getFormattedValue(dataStore.totalIncomeThisMonth))
-const totalTransferFormatted = computed(() => getFormattedValue(dataStore.totalTransfersThisMonth))
-const totalSurplusFormatted = computed(() => getFormattedValue(dataStore.totalSurplusThisMonth))
+const totalExpenseFormatted = computed(() => getFormattedValue(dataStore.totalExpenseThisMonth,0,2))
+const totalIncomeFormatted = computed(() => getFormattedValue(dataStore.totalIncomeThisMonth,0,2))
+const totalTransferFormatted = computed(() => getFormattedValue(dataStore.totalTransfersThisMonth,0,2))
+const totalSurplusFormatted = computed(() => getFormattedValue(dataStore.totalSurplusThisMonth,0,2))
 
 const onGoToTransactionsByType = async (transactionType) => {
   let excludedUrl = getExcludedTransactionUrl()

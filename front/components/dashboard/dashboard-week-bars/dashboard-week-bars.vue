@@ -35,7 +35,7 @@ const barsList = computed(() => {
     return {
       date: date,
       label: weekdayName,
-      value: getFormattedValue(amount, 0),
+      value: getFormattedValue(amount, 0,2),
       percent: percent,
     }
   })

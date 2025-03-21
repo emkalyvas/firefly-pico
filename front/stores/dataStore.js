@@ -26,6 +26,7 @@ import BudgetRepository from '~/repository/BudgetRepository.js'
 import BudgetTransformer from '~/transformers/BudgetTransformer.js'
 import BudgetLimitTransformer from '~/transformers/BudgetLimitTransformer.js'
 import Currency from '~/models/Currency.js'
+import { getFormatedNumber } from '~/utils/MathUtils'
 
 export const useDataStore = defineStore('data', {
   state: () => {
@@ -115,7 +116,6 @@ export const useDataStore = defineStore('data', {
           const currencyAmount = this.dashboardAccountsTotalByCurrency[currencyCode]
           return result + convertCurrency(currencyAmount, currencyCode, Currency.getCode(state.dashboardCurrency))
         }, 0)
-        .toFixed(2)
     },
 
     dashboardExpensesByCategory(state) {

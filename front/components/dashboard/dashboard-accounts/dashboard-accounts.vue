@@ -68,7 +68,7 @@ const visibleDashboardAccounts = computed(() => {
 const hasHiddenAccounts = computed(() => dataStore.dashboardAccounts.some((account) => !Account.getIsVisibleOnDashboard(account)))
 
 const accountTotal = computed(() => {
-  return getFormattedValue(dataStore.dashboardAccountsEstimatedTotal)
+  return getFormattedValue(dataStore.dashboardAccountsEstimatedTotal,0,2)
 })
 
 const getAccountAmount = (account) => {

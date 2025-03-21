@@ -30,7 +30,7 @@ const dataStore = useDataStore()
 const budgetList = dataStore.budgetList
 const hasBudgets = computed(() => budgetList.length > 0)
 
-const budgetLimitTotalFormatted = computed(() => `${getFormattedValue(dataStore.budgetLimitTotal)} ${dataStore.dashboardCurrencyCode}`)
-const budgetLimitSpentFormatted = computed(() => `${getFormattedValue(dataStore.budgetLimitSpent)} ${dataStore.dashboardCurrencyCode}`)
-const budgetLimitRemainingFormatted = computed(() => `${getFormattedValue(dataStore.budgetLimitRemaining) } ${dataStore.dashboardCurrencyCode}`)
+const budgetLimitTotalFormatted = computed(() => `${getFormattedValue(dataStore.budgetLimitTotal,0,2)} ${dataStore.dashboardCurrencyCode}`)
+const budgetLimitSpentFormatted = computed(() => `${getFormattedValue(dataStore.budgetLimitSpent,0,2)} ${dataStore.dashboardCurrencyCode}`)
+const budgetLimitRemainingFormatted = computed(() => `${getFormattedValue(dataStore.budgetLimitRemaining,0,2) } ${dataStore.dashboardCurrencyCode}`)
 </script>

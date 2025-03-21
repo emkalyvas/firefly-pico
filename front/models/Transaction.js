@@ -3,6 +3,7 @@ import TransactionTransformer from '~/transformers/TransactionTransformer'
 import TransactionRepository from '~/repository/TransactionRepository'
 import { useProfileStore } from '~/stores/profileStore'
 import Account from '~/models/Account'
+import { getFormatedNumber } from '~/utils/MathUtils'
 import _, { get, isEqual } from 'lodash'
 
 class Transaction extends BaseModel {
@@ -113,7 +114,7 @@ class Transaction extends BaseModel {
   }
 
   static getAmountFormatted(transaction) {
-    return this.getAmount(transaction).toFixed(2)
+    return formatAmount(this.getAmount(transaction))
   }
 
   static getDate(transaction) {
@@ -121,7 +122,7 @@ class Transaction extends BaseModel {
   }
 
   static formatAmount(amount) {
-    return (Math.round(amount * 100) / 100).toFixed(2)
+    return getFormatedNumber(amount)
   }
 
   static getTransactionTypeForAccounts({ source, destination }) {
