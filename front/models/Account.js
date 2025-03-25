@@ -193,6 +193,17 @@ export default class Account extends BaseModel {
     return _.get(account, 'attributes.name')
   }
 
+  static getBadge(account) {
+    const badge = _.get(account, 'attributes.badge')
+    if (!badge) {
+      return null
+    }
+    if (badge.length >= 1) {
+      return badge.toUpperCase()
+    }
+    return null
+  }
+
   static getCurrency(account) {
     if (!account) {
       return null

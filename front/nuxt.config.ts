@@ -80,8 +80,6 @@ export default defineNuxtConfig({
 
   modules: ['@vite-pwa/nuxt', '@nuxtjs/device', '@pinia/nuxt', '@vant/nuxt', 'nuxt-svgo', '@nuxt/eslint', '@nuxtjs/i18n'],
 
-
-
   svgo: {
     defaultImport: 'component',
     autoImportPath: './assets/icons',
