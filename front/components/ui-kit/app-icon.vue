@@ -1,6 +1,6 @@
-<template>
-  <div class="icon-container" :style="style">
-    <component :is="props.icon" :fontControlled="false" :stroke-width="props.stroke" class="svg-icon" :color-invertable="isColorInvertable" />
+<template >
+  <div class="icon-container">
+    <component :is="props.icon" :style="style" :fontControlled="false" :stroke-width="props.stroke" class="svg-icon" :color-invertable="isColorInvertable" />
     <span v-if="props.badge" class="icon-badge">{{ props.badge }}</span>
   </div>
 </template>
